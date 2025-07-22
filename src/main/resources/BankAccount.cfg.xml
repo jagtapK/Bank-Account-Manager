@@ -16,7 +16,7 @@
 		
 		<property name="hibernate.hbm2ddl.auto">update</property>
 		
-		<mapping class = "bankAccountEntity.Accounts"/>
+		<mapping class = "bankAccount.Entity.Accounts"/>
 	
 		
 		

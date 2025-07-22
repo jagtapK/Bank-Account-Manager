@@ -1,4 +1,4 @@
-package banckAccount.Entity;
+package bankAccount.Entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
