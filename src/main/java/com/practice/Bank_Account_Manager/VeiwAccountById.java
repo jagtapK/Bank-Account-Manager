@@ -11,22 +11,19 @@ import bankAccount.Utility.bankUtility;
 
 public class VeiwAccountById {
 
-	public static void main(String[] args) {
-		
+	public void ById() {
+
 		SessionFactory factory = bankUtility.getSessionFactory();
 
 		Session session = factory.openSession();
 
 		Transaction transaction = session.beginTransaction();
 
-		List<Accounts> feedback = session.createQuery("Select s from Accounts s", Accounts.class)
-				.getResultList();
+		List<Accounts> feedback = session.createQuery("Select s from Accounts s", Accounts.class).getResultList();
 		feedback.stream().forEach(k -> System.out.println(k.toString()));
 
 		transaction.commit();
 		session.close();
-
-	
 
 	}
 

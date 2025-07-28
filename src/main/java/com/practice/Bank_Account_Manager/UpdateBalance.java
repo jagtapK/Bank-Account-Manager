@@ -11,7 +11,8 @@ import bankAccount.Utility.bankUtility;
 
 public class UpdateBalance {
 
-	public static void main(String[] args) {
+	public void updateB() {
+		
 		SessionFactory factory = bankUtility.getSessionFactory();
 
 		Session session = factory.openSession();
@@ -23,7 +24,10 @@ public class UpdateBalance {
 		int id = sc.nextInt();
 		
 		Accounts f = session.find(Accounts.class, id);
-		System.out.println(f.toString());
+		System.out.println("Enter Updated Balance");
+		
+		int balance = sc.nextInt();
+		f.setBalance(balance);
 		
 		transaction.commit();
 
