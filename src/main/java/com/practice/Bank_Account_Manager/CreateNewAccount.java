@@ -11,7 +11,8 @@ import bankAccount.Utility.bankUtility;
 
 public class CreateNewAccount {
 
-	public static void main(String[] args) {
+	public void NewAccount() {
+		
 		SessionFactory factory = bankUtility.getSessionFactory();
 
 		// 2. session from session factory
@@ -33,14 +34,13 @@ public class CreateNewAccount {
 
 		System.out.println("Enter your Account Type: ");
 		a.setAccountType(sc.nextLine());
-		
+
 		System.out.println("Enter Account Opened Date: ");
 		a.setOpenDate(sc.nextLine());
 
 		System.out.println("Enter your Account Balance");
 		a.setBalance(sc.nextInt());
 
-		
 		// 4.save process
 		session.persist(a);
 

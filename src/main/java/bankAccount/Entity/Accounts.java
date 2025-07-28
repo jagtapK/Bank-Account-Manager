@@ -7,61 +7,60 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "account")
 public class Accounts {
-		
+
 	@Id
-		private int id;
-		private String accountHolder;
-		
-		private String accountType;
-		private int balance;
-		
-		private String openDate;
+	private int id;
+	private String accountHolder;
 
-		public int getId() {
-			return id;
-		}
+	private String accountType;
+	private int balance;
 
-		public void setId(int id) {
-			this.id = id;
-		}
+	private String openDate;
 
-		public String getAccountHolder() {
-			return accountHolder;
-		}
+	public int getId() {
+		return id;
+	}
 
-		public void setAccountHolder(String accountHolder) {
-			this.accountHolder = accountHolder;
-		}
+	public void setId(int id) {
+		this.id = id;
+	}
 
-		public String getAccountType() {
-			return accountType;
-		}
+	public String getAccountHolder() {
+		return accountHolder;
+	}
 
-		public void setAccountType(String accountType) {
-			this.accountType = accountType;
-		}
+	public void setAccountHolder(String accountHolder) {
+		this.accountHolder = accountHolder;
+	}
 
-		public int getBalance() {
-			return balance;
-		}
+	public String getAccountType() {
+		return accountType;
+	}
 
-		public void setBalance(int balance) {
-			this.balance = balance;
-		}
+	public void setAccountType(String accountType) {
+		this.accountType = accountType;
+	}
 
-		public String getOpenDate() {
-			return openDate;
-		}
+	public int getBalance() {
+		return balance;
+	}
 
-		public void setOpenDate(String openDate) {
-			this.openDate = openDate;
-		}
+	public void setBalance(int balance) {
+		this.balance = balance;
+	}
 
-		@Override
-		public String toString() {
-			return "Accounts [id=" + id + ", accountHolder=" + accountHolder + ", accountType=" + accountType
-					+ ", balance=" + balance + ", openDate=" + openDate + "]";
-		}
-	
-		
+	public String getOpenDate() {
+		return openDate;
+	}
+
+	public void setOpenDate(String openDate) {
+		this.openDate = openDate;
+	}
+
+	@Override
+	public String toString() {
+		return "Accounts [id=" + id + ", accountHolder=" + accountHolder + ", accountType=" + accountType + ", balance="
+				+ balance + ", openDate=" + openDate + "]";
+	}
+
 }
